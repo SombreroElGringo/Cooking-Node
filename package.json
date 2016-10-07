@@ -1,0 +1,23 @@
+{
+  "name": "cooking-node",
+  "version": "1.0.0",
+  "description": "It's a NodeJs's application for Cooking Chef !",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Florent Pailhes",
+  "license": "MIT",
+  "bin": {
+    "cook": "./index.js"
+  },
+  "dependencies": {
+    "commander": "^2.9.0",
+    "figlet": "^1.2.0",
+    "fs": "0.0.1-security",
+    "inquirer": "^1.2.1",
+    "lodash": "^4.16.3",
+    "sqlite": "^2.2.0"
+  }
+}

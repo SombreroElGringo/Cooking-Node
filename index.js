@@ -13,7 +13,7 @@
  *
  *	@author: Florent Pailhes
  *	
- *	@git:
+ *	@git: https://github.com/SombreroElGringo/cooking-node.git
  *	
  *	@description: Cooking Node is an application develop with NodeJs. 
  *				  This application is a cookbook in command prompt! 

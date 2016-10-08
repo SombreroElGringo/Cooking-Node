@@ -14,7 +14,7 @@
 
 **Cooking Node** is an application develop with **Node.Js**.<br>
 This application is a **cookbook** in **command prompt**!<br> 
-Like this the developpers wont have excuse for not cooking!<br>
+Like this the developpers will have no excuse for not cooking!<br>
 <br>
 ![nodejs-project](http://i.makeagif.com/media/10-08-2016/ejSgHo.gif)
 

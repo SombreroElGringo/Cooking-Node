@@ -1055,7 +1055,7 @@ function initSomeRecipes() {
 	 	type: 'entrée',
 	 	time: '45min à 1heure',
 
-	 	ingredient: '\n- 4 cuillerées de sauce de soja\n\r- 4 cuillerées d\'huile de sesame\n\r- 4 cuillerées d\'eau\n\r- 10 feuilles de chou\n\r- une botte de "nira" (ciboulette chinoise)\n\r- 4 cuillerées de farine de pomme de terre\n\r- un peu d\'ail\n\r- 50 feuilles de ravioli chinois\n\r- 500 g de porc hache\n\n',
+	 	ingredient: '\n- 4 cuillerées de sauce de soja\n\r- 4 cuillerées d\'huile de sesame\n\r- 4 cuillerées d\'eau\n\r- 10 feuilles de chou\n\r- une botte de \'nira\' (ciboulette chinoise)\n\r- 4 cuillerées de farine de pomme de terre\n\r- un peu d\'ail\n\r- 50 feuilles de ravioli chinois\n\r- 500 g de porc hache\n\n',
 
 	 	method: '\n\r1) Mettre le porc dans un bol avec la sauce de soja, l\'huile de sésame et l\'eau et les mélanger.\n\r2) Cuire les feuilles de chou à l\'eau pour 2-3 mn et les hacher et les égoutter à la main. Hacher le nira et l\'ail.\n\rMettre les légumes dans un autre bol avec la farine de pomme de terre et les mélanger.\n\rMélanger 1 et 2.\n\r3) Mettre une cuillère de garniture sur chaque feuille de ravioli chinois et mettre un petit peu d\'eau au bord des feuilles et les envelopper.\n\rMettre de la farine de pomme de terre sur l\'assiette avant d\'y mettre les raviolis, sinon ils vont coller à l\'assiette.\n\r4) Mettre un peu d\'huile dans la poêle et y cuire les raviolis jusqu\'à ce qu\'ils deviennent marron clair. Mettre de l\'eau jusqu\'à la demi hauteur des raviolis et mettre le couvercle.\n\rLe lever quand l\'eau est presque disparue, et cuire les raviolis jusqu\'à ce que les feuilles des raviolis deviennent croustillantes.\n\n',
 

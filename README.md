@@ -28,7 +28,14 @@ Like this the developpers wont have excuse for not cooking!
 
 
 
-##Features
+##Requirements
+
+*        commander: 2.9.0<br>
+*        figlet: 1.2.0<br>
+*        fileSystem: 0.0.1-security<br>
+*        inquirer: 1.2.1<br>
+*        lodash: 4.16.3<br>
+*        sqlite: 2.2.0<br>
 
 ##License
 

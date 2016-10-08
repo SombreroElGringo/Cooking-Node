@@ -2,22 +2,22 @@
 
 /**
  *
- *						 _____             _    _               _   _           _      
- *						/  __ \           | |  (_)             | \ | |         | |     
- *						| /  \/ ___   ___ | | ___ _ __   __ _  |  \| | ___   __| | ___ 
- *						| |    / _ \ / _ \| |/ / | '_ \ / _` | | . ` |/ _ \ / _` |/ _ \
- *						| \__/\ (_) | (_) |   <| | | | | (_| | | |\  | (_) | (_| |  __/
- *						 \____/\___/ \___/|_|\_\_|_| |_|\__, | \_| \_/\___/ \__,_|\___|
- *								                         __/ |                         
- *								                        |___/ 
+ *					 _____             _    _               _   _           _      
+ *					/  __ \           | |  (_)             | \ | |         | |     
+ *					| /  \/ ___   ___ | | ___ _ __   __ _  |  \| | ___   __| | ___ 
+ *					| |    / _ \ / _ \| |/ / | '_ \ / _` | | . ` |/ _ \ / _` |/ _ \
+ *					| \__/\ (_) | (_) |   <| | | | | (_| | | |\  | (_) | (_| |  __/
+ *					 \____/\___/ \___/|_|\_\_|_| |_|\__, | \_| \_/\___/ \__,_|\___|
+ *							                 __/ |                         
+ *							                |___/ 
  *
  *	@author: Florent Pailhes
  *	
  *	@git: https://github.com/SombreroElGringo/cooking-node.git
  *	
- *	@description: Cooking Node is an application develop with NodeJs. 
- *				  This application is a cookbook in command prompt! 
- *				  Like this the developpers will have no excuse for not cooking!
+ *	@description: 	Cooking Node is an application develop with NodeJs. 
+ *			This application is a cookbook in command prompt! 
+ *			Like this the developpers will have no excuse for not cooking!
  *
  *	@version: 1.0.0
  *

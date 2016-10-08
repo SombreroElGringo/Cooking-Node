@@ -8,20 +8,20 @@
  *						| |    / _ \ / _ \| |/ / | '_ \ / _` | | . ` |/ _ \ / _` |/ _ \
  *						| \__/\ (_) | (_) |   <| | | | | (_| | | |\  | (_) | (_| |  __/
  *						 \____/\___/ \___/|_|\_\_|_| |_|\__, | \_| \_/\___/ \__,_|\___|
- *								                 __/ |                         
- *								                |___/ 
+ *								                         __/ |                         
+ *								                        |___/ 
  *
  *	@author: Florent Pailhes
  *	
  *	@git: https://github.com/SombreroElGringo/cooking-node.git
  *	
  *	@description: Cooking Node is an application develop with NodeJs. 
- *		      This application is a cookbook in command prompt! 
- *		      Like this the developpers will have no excuse for not cooking!
+ *				  This application is a cookbook in command prompt! 
+ *				  Like this the developpers will have no excuse for not cooking!
  *
  *	@version: 1.0.0
  *
- *	@Licence: MIT
+ *	@license: MIT
  *
 **/
 
@@ -81,7 +81,7 @@ else if (program.initialisation){
   //Allows to insert some countries in the database
   initSomeCountries()
   //Allows to insert some recipes in the database
-  initSomeRecipes() 
+  initSomeRecipes()
 }  
 else if (program.hello){
 
@@ -91,10 +91,10 @@ else if (program.hello){
   }
   else if ( args[1] == null && args[2] == null){
   	
-  	console.log('Hello Anonymous Cooking Chef !')
+  	console.log('Hello Anonymous top Chef !')
   } 
   else {
-  	console.log('Hello Cooking Chef '+args[1]+' !')
+  	console.log('Hello top Chef '+args[1]+' !')
   }
 }
 else if (program.cookingBook){
@@ -711,7 +711,7 @@ function getCountries(){
 
 	db.serialize(function () {
 
-	  db.all("SELECT name FROM countries", function (err, countriesList) {
+	  db.all("SELECT name FROM countries ORDER BY name", function (err, countriesList) {
 
 	    resolve(countriesList)  
       })
@@ -738,7 +738,7 @@ function getRecipes(countryChoose){
 
 	  	//console.log(row['id']) // print the id of the country
 
-	  	db.all("SELECT name FROM recipes WHERE id_Country="+row['id']+" ", function (err, recipesList) {
+	  	db.all("SELECT name FROM recipes WHERE id_Country="+row['id']+" ORDER BY name ", function (err, recipesList) {
 
 	      resolve(recipesList) 
 	    }) 
@@ -760,7 +760,7 @@ function getAllRecipes(){
 
 	db.serialize(function () {
 
-	  db.all("SELECT name FROM recipes", function (err, recipesList) {
+	  db.all("SELECT name FROM recipes ORDER BY name", function (err, recipesList) {
 
 	    resolve(recipesList)  
       })
@@ -909,6 +909,16 @@ function updateCountry(countryName, newValue){
   return db.run('UPDATE countries SET name="'+newValue+'" WHERE name="'+countryName+'" ')
 }
 
+
+/** 
+ * Allows to close the connection to the database
+ */
+
+function dbClose(){
+
+  db.close()
+}
+
 //___________________________________________________________________________ FileSystem _______
 
 /** 
@@ -1031,7 +1041,7 @@ function initSomeRecipes() {
 	 	type: 'déssert',
 	 	time: '30min à 45min',
 	 						
-	 	ingredient: '\nPour la pâte à choux :\n\n - 25 cl d\'eau\n\r- 125 g de farine\n\r- 60 g de beurre\n\r- 1 pincée de sel\n\r- 50 g de sucre\n\r- 4 œufs Pour la sauce au chocolat :\n\n- 50 g de chocolat\n\r- 1 filet de lait Pour la garniture :\n\n- glace vanille\n\n',
+	 	ingredient: '\n\nPour la pâte à choux :\n\n - 25 cl d\'eau\n\r- 125 g de farine\n\r- 60 g de beurre\n\r- 1 pincée de sel\n\r- 50 g de sucre\n\r- 4 œufs Pour la sauce au chocolat :\n\n- 50 g de chocolat\n\r- 1 filet de lait Pour la garniture :\n\n- glace vanille\n\n',
 
 		method: '\n\rPour la pâte à choux : \n\nMettre l\'eau, le beurre, le sucre et le sel dans une casserole sur le feu.\n\rPorter l\'eau à ébullition.\n\rRetirer du feu et verser la farine en une seule fois.\n\rMélanger avec une cuillère en bois et ne pas laisser de grumeaux.\n\rRemuer la pâte au dessus du feu, jusqu\'à ce qu\'elle se détache des parois de la casserole et forme une boule.\n\rLaisser refroidir une minute.\n\rIncorporer les œufs un à un.\n\rFormer les choux sur une plaque recouverte de papier sulfurisé..\n\rCuire au four chaud à 180°C (th.6) pendant une vingtaine de minutes.\n\rUne fois les choux refroidis, préparer votre sauce au chocolat.\n\rFaire fondre le chocolat au bain-marie avec un peu de lait (varier la quantité en fonction des goûts).\n\rPour finir, couper les choux en deux, les garnir d\'une boule de glace.\n\rDisposer les choux dans les assiettes et verser le chocolat tiède dessus.\n\rDéguster aussitôt.\n\rBon appétit !\n\n',
 
@@ -1043,7 +1053,7 @@ function initSomeRecipes() {
 	 	type: 'plat',
 	 	time: '10min à 30min',
 	 						
-	 	ingredient: '\n- 500 g de blancs de poulet découpés en lanières\n\r- huile pour graisser\n\rPour la marinade :\n\r- 6 cl de sauce teriyaki\n\r- 6 cl de miel\n\r- 1 gousse d\'ail pilée\n\r- 1 pincée de gingembre moulu\n\n',
+	 	ingredient: '\n\n- 500 g de blancs de poulet découpés en lanières\n\r- huile pour graisser\n\rPour la marinade :\n\r- 6 cl de sauce teriyaki\n\r- 6 cl de miel\n\r- 1 gousse d\'ail pilée\n\r- 1 pincée de gingembre moulu\n\n',
 
 		method: '\n\rUstensiles : petites brochettes de bambou\n\rMettre le poulet dans un saladier en verre, mélangez les ingrédients de la marinade et nappez-en le poulet.\n\rLaissez marinez plusieurs heures, voire toute une nuit au réfrigérateur.\n\rEnfilez deux lanières de blanc de poulet sur chaque brochette selon un mouvement ondulatoire.\n\rHuilez la grille du barbecue, attendez qu\'elle soit bien chaude et disposez les brochettes dessus.\n\rLaissez-les cuire pendant 2 mn de chaqus côté, en les badigeonnant de marinade pendant le temps de cuisson et en les retournant.\n\rA servir immédiatement et à déguster avec les doigts !\n\rBon appétit.\n\n',
 
@@ -1055,11 +1065,35 @@ function initSomeRecipes() {
 	 	type: 'entrée',
 	 	time: '45min à 1heure',
 
-	 	ingredient: '\n- 4 cuillerées de sauce de soja\n\r- 4 cuillerées d\'huile de sesame\n\r- 4 cuillerées d\'eau\n\r- 10 feuilles de chou\n\r- une botte de \'nira\' (ciboulette chinoise)\n\r- 4 cuillerées de farine de pomme de terre\n\r- un peu d\'ail\n\r- 50 feuilles de ravioli chinois\n\r- 500 g de porc hache\n\n',
+	 	ingredient: '\n\n- 4 cuillerées de sauce de soja\n\r- 4 cuillerées d\'huile de sesame\n\r- 4 cuillerées d\'eau\n\r- 10 feuilles de chou\n\r- une botte de \’nira\' (ciboulette chinoise)\n\r- 4 cuillerées de farine de pomme de terre\n\r- un peu d\'ail\n\r- 50 feuilles de ravioli chinois\n\r- 500 g de porc hache\n\n',
 
 	 	method: '\n\r1) Mettre le porc dans un bol avec la sauce de soja, l\'huile de sésame et l\'eau et les mélanger.\n\r2) Cuire les feuilles de chou à l\'eau pour 2-3 mn et les hacher et les égoutter à la main. Hacher le nira et l\'ail.\n\rMettre les légumes dans un autre bol avec la farine de pomme de terre et les mélanger.\n\rMélanger 1 et 2.\n\r3) Mettre une cuillère de garniture sur chaque feuille de ravioli chinois et mettre un petit peu d\'eau au bord des feuilles et les envelopper.\n\rMettre de la farine de pomme de terre sur l\'assiette avant d\'y mettre les raviolis, sinon ils vont coller à l\'assiette.\n\r4) Mettre un peu d\'huile dans la poêle et y cuire les raviolis jusqu\'à ce qu\'ils deviennent marron clair. Mettre de l\'eau jusqu\'à la demi hauteur des raviolis et mettre le couvercle.\n\rLe lever quand l\'eau est presque disparue, et cuire les raviolis jusqu\'à ce que les feuilles des raviolis deviennent croustillantes.\n\n',
 
 	 	country: 'Japan'
+	},
+
+	{
+	 	name: 'Okonomiyaki',
+	 	type: 'plat',
+	 	time: '45min',
+
+	 	ingredient: '\n\n- 250 g de farine\n\r- 4 oeufs\n\r- un demi chou vert\n\r- 4 tasses de dashi (bouillon japonais)\n\r- 400 g de poitrine de porc (en fines lamelles)\n\r- 10 g de gingembre rose\n\r- des algues japonaises, de la bonite séchée, de la sauce "okonomiyaki" (sauce barbecue) et de la mayonnaise\n\n',
+
+	 	method: '\n\nEmincez le chou vert très finement. Mettez le dashi dans un saladier et ajoutez-y les oeufs (blanc et jaune), battez-les, ajoutez la farine, le chou vert et le gingembre.\n\rMélangez le tout.\n\rUtilisez une plaque chauffante ou à défaut une large poêle, lorsque celle-ci est très chaude (environ 250 degrés) huilez-la bien avant d\'y disposer le porc en cercle et versez dessus la pâte obtenue auparavant en galette de 2 cm d\'épaisseur.\n\rLaisser-la cuire pendant 5 mn, retournez-la et patientez 5 mn supplémentaires.\n\rAjoutez la sauce "okonomiyaki", la mayonnaise, les algues japonaises et la bonite séchée.\n\rMangez avec une spatule japonaise.\n\rITADAKIMASU\n\n',
+
+	 	country: 'Japan'
+	},
+
+	{
+	 	name: 'Pizza',
+	 	type: 'plat',
+	 	time: '45min à 1heure',
+
+	 	ingredient: '\n\n- un pâte à pizza prête à cuire\n\r- une petite boîte de concentrée de tomate\n\r- une barquette de 125 g de lardons nature\n\r- un petite boîte de champignon de Paris en lamelles\n\r- 2 grandes poignées de gruyère râpée\n\n',
+
+	 	method: '\n\rFaire cuire dans une poêle les lardons et les champignons.\n\rDans un bol, verser la boîte de concentré de tomate, y ajouter un demi verre d\'eau, ensuite mettre un carré de sucre (pour enlever l\'acidité de la tomate) une pincée de sel, de poivre, et une pincée d\'herbe de Provence.\n\rDérouler la pâte à pizza sur le lèche frite de votre four, piquer-le.\n\rAvec une cuillère à soupe, étaler délicatement la sauce tomate, ensuite y ajouter les lardons et les champignons bien dorer.\n\rParsemer de fromage râpée.\n\rMettre au four à 220°, thermostat 7-8, pendant 20 min (ou lorsque le dessus de la pizza est doré).\n\n',
+
+	 	country: 'Italia'
 	}
   ]
   
@@ -1092,6 +1126,9 @@ function initSomeCountries(){
 	},
 	{
 		"name": "USA"
+	},
+	{
+		"name": "Italia"
 	}
   ]
 

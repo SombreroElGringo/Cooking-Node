@@ -24,6 +24,21 @@ Like this the developpers wont have excuse for not cooking!
 
 ##Guide
 
+| Command | Description |
+| --- | --- |
+| cook -h, --help | Output usage information |
+| cook -V, --version | Output the version number |
+| cook -A, --allTable | Show all tables and their sql request! |
+| cook -E, --exportRecipe [recipe_name] | Export the recipe in a recipe_name.txt |
+| cook -H, --hello [firstname] [familyname] | Show 'Hello top chef' to someone! |
+| cook -I, --information | Show application description |
+| cook -L, --logo | Cooking Node ® |
+| cook -a, --addRecipe | Create a new recipe |
+| cook -c, --cookingBook | Show the cookbook |
+| cook -d, --delete | Delete a recipe or a country |
+| cook -e, --exportR | Export the recipe in a recipe_name.txt |
+| cook -i, --initialisation | Insert some data in the database |
+| cook -u, --update | Update a recipe or a country |
 
 
 ##Example

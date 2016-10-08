@@ -17,8 +17,10 @@ This application is a **cookbook** in **command prompt**!<br>
 Like this the developpers wont have excuse for not cooking!
 
 ##Install
-
-
+ 
+ $ cd /cooking-node<br>
+ $npm install -g<br>
+ $cook
 
 ##Guide
 

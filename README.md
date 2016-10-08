@@ -2,7 +2,9 @@
 
 ##Description
 
-Cooking Node is a NodeJs application.
+| -- **Cooking Node** is an application develop with **NodeJs**.
+| -- This application is a **cookbook** in **command prompt**! 
+| -- Like this the developpers wont have excuse for not cooking!
 
 ##Install
 

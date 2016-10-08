@@ -16,11 +16,24 @@
 This application is a **cookbook** in **command prompt**!<br> 
 Like this the developpers wont have excuse for not cooking!
 
+
+##Requirements
+
+*        Node.Js<br>
+*        commander: 2.9.0<br>
+*        figlet: 1.2.0<br>
+*        fileSystem: 0.0.1-security<br>
+*        inquirer: 1.2.1<br>
+*        lodash: 4.16.3<br>
+*        sqlite: 2.2.0<br>
+
+
 ##Install
  
  $ cd /cooking-node<br>
  $ npm install -g<br>
  $ cook
+
 
 ##Guide
 
@@ -41,19 +54,11 @@ Like this the developpers wont have excuse for not cooking!
 | cook -u, --update | Update a recipe or a country |
 
 
-##Example
+##Recommended
 
-
-
-##Requirements
-
-*        Node.Js<br>
-*        commander: 2.9.0<br>
-*        figlet: 1.2.0<br>
-*        fileSystem: 0.0.1-security<br>
-*        inquirer: 1.2.1<br>
-*        lodash: 4.16.3<br>
-*        sqlite: 2.2.0<br>
+After installation step, insert some data in the application with this command:<br>
+<br>
+$ cook -i 
 
 
 ##License

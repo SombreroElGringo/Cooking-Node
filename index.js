@@ -16,8 +16,8 @@
  *	@git: https://github.com/SombreroElGringo/cooking-node.git
  *	
  *	@description: Cooking Node is an application develop with NodeJs. 
- *				  This application is a cookbook in command prompt! 
- *				  Like this the developpers will have no excuse for not cooking!
+ *		      This application is a cookbook in command prompt! 
+ *		      Like this the developpers will have no excuse for not cooking!
  *
  *	@version: 1.0.0
  *

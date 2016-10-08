@@ -12,7 +12,7 @@
 
 ##Description
 
-**Cooking Node** is an application develop with **NodeJs**.<br>
+**Cooking Node** is an application develop with **Node.Js**.<br>
 This application is a **cookbook** in **command prompt**!<br> 
 Like this the developpers wont have excuse for not cooking!
 
@@ -32,6 +32,7 @@ Like this the developpers wont have excuse for not cooking!
 
 ##Requirements
 
+*        Node.Js<br>
 *        commander: 2.9.0<br>
 *        figlet: 1.2.0<br>
 *        fileSystem: 0.0.1-security<br>

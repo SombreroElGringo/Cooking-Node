@@ -30,6 +30,8 @@ Like this the developpers wont have excuse for not cooking!
 
 ##Install
  
+ Download cooking-node and open your terminal<br>
+ <br>
  $ cd /cooking-node<br>
  $ npm install -g<br>
  $ cook

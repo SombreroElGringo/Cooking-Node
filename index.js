@@ -17,7 +17,7 @@
  *	
  *	@description: Cooking Node is an application develop with NodeJs. 
  *				  This application is a cookbook in command prompt! 
- *				  Like this the developpers wont have excuse for not cooking!
+ *				  Like this the developpers will have no excuse for not cooking!
  *
  *	@version: 1.0.0
  *
@@ -74,7 +74,7 @@ if(program.logo){
 } 
 else if (program.information){
 
-  console.log('\n\nCooking Node is an application develop with NodeJs.\n\rThis application is a cookbook in command prompt!\n\rLike this the developpers wont have excuse for not cooking!\n\nCooking Node®\n\n')
+  console.log('\n\nCooking Node is an application develop with NodeJs.\n\rThis application is a cookbook in command prompt!\n\rLike this the developpers will have no excuse for not cooking!\n\nCooking Node®\n\n')
 }
 else if (program.initialisation){
   

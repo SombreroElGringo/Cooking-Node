@@ -39,6 +39,13 @@ Like this the developpers will have no excuse for not cooking!<br>
  $ cook
 
 
+##Recommended
+
+After installation step, insert some data in the application with this command:<br>
+<br>
+$ cook -i 
+
+
 ##Guide
 
 | Command | Description |
@@ -56,13 +63,6 @@ Like this the developpers will have no excuse for not cooking!<br>
 | cook -e, --exportR | Export the recipe in a recipe_name.txt |
 | cook -i, --initialisation | Insert some data in the database |
 | cook -u, --update | Update a recipe or a country |
-
-
-##Recommended
-
-After installation step, insert some data in the application with this command:<br>
-<br>
-$ cook -i 
 
 
 ##License

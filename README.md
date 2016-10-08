@@ -36,7 +36,6 @@ Like this the developpers will have no excuse for not cooking!<br>
  <br>
  $ cd /cooking-node<br>
  $ npm install<br>
- $ sudo npm install -g<br>
  $ cook
 
 

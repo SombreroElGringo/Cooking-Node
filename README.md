@@ -19,8 +19,8 @@ Like this the developpers wont have excuse for not cooking!
 ##Install
  
  $ cd /cooking-node<br>
- $npm install -g<br>
- $cook
+ $ npm install -g<br>
+ $ cook
 
 ##Guide
 

@@ -2,14 +2,14 @@
 
 /**
  *
- *					 _____             _    _               _   _           _      
- *					/  __ \           | |  (_)             | \ | |         | |     
- *					| /  \/ ___   ___ | | ___ _ __   __ _  |  \| | ___   __| | ___ 
- *					| |    / _ \ / _ \| |/ / | '_ \ / _` | | . ` |/ _ \ / _` |/ _ \
- *					| \__/\ (_) | (_) |   <| | | | | (_| | | |\  | (_) | (_| |  __/
- *					 \____/\___/ \___/|_|\_\_|_| |_|\__, | \_| \_/\___/ \__,_|\___|
- *							                 __/ |                         
- *							                |___/ 
+ *				 _____             _    _               _   _           _      
+ *				/  __ \           | |  (_)             | \ | |         | |     
+ *				| /  \/ ___   ___ | | ___ _ __   __ _  |  \| | ___   __| | ___ 
+ *				| |    / _ \ / _ \| |/ / | '_ \ / _` | | . ` |/ _ \ / _` |/ _ \
+ *				| \__/\ (_) | (_) |   <| | | | | (_| | | |\  | (_) | (_| |  __/
+ *				 \____/\___/ \___/|_|\_\_|_| |_|\__, | \_| \_/\___/ \__,_|\___|
+ *					                         __/ |                         
+ *					                        |___/ 
  *
  *	@author: Florent Pailhes
  *	
@@ -17,7 +17,7 @@
  *	
  *	@description: 	Cooking Node is an application develop with NodeJs. 
  *			This application is a cookbook in command prompt! 
- *			Like this the developpers will have no excuse for not cooking!
+ *		  	Like this the developpers will have no excuse for not cooking!
  *
  *	@version: 1.0.0
  *
@@ -32,11 +32,14 @@ const program = require('commander')
 const inquirer = require('inquirer')
 const fs = require('fs')
 const figlet = require('figlet')
+const nodemailer = require('nodemailer');
+const sqlite3 = require('sqlite3').verbose();
 
-var sqlite3 = require('sqlite3').verbose();
 //Allows to create (if not exist) or open a connection with the database
 var db = new sqlite3.Database(':dataCookingNode:');
 
+//Create reusable transporter object using the default SMTP transport 
+var transporter = nodemailer.createTransport('smtps://cookingnode%40gmail.com:cookmesomething@smtp.gmail.com')
 //Allows to have the arguments of the command in the table args
 var args = process.argv.slice(2);
 
@@ -59,6 +62,7 @@ program
 	.option('-d, --delete', 'Delete a recipe or a country')
 	.option('-e, --exportR', 'Export the recipe in a recipe_name.txt')
 	.option('-i, --initialisation', 'Insert some data in the database')
+	.option('-m, --mail', 'Send the recipe to someone')
 	.option('-u, --update', 'Update a recipe or a country')
 	
 
@@ -200,6 +204,10 @@ else if (program.update){
       }
     })
   })
+}
+else if (program.mail){
+
+  dialogMail()
 }   
 else {
   
@@ -626,6 +634,44 @@ function dialogExportR(){
   }) 
 }
 
+
+/** 
+ * Allows to show the mail's dialog
+ *
+ * @param {Object} recipesList - List of all recipes in the database
+ * @param {string} answerC.email - Email of the reciver
+ * @param {string} answer.recipeN - The name of the recipe
+ */
+
+function dialogMail(){
+
+   getAllRecipes().then((recipesList) => {
+	
+  	//Prompt allows to interact with the user
+	inquirer.prompt([
+		{
+			type: 'list',
+			message: 'Choose the recipe you want send: ',
+			name: 'recipeN',
+			choices: recipesList
+		}
+	]).then((answer) => {
+
+	  inquirer.prompt([
+		      {
+				type: 'input',
+				message: 'Write the email: ',
+				name: 'email'
+		      }
+      ]).then((answerC) => {
+
+      	sendRecipeTo(answerC.email, answer.recipeN)
+      })	
+	})
+  }) 
+}
+
+
 //___________________________________________________________________________ SQLite ___________
 
 /** 
@@ -962,6 +1008,7 @@ function exportRecipe(recipeName){
   }
 }
 
+
 //___________________________________________________________________________ Figlet ___________
 
 /** 
@@ -1012,6 +1059,49 @@ function getLogo(){
         return;
       }
       resolve(data)
+    })
+  })
+}
+
+
+//___________________________________________________________________________ NodeMail _________
+
+/** 
+ * Allows to send a mail with a recipe to someone
+ *
+ * @param {string} textMail - Message of the mail
+ * @param {string} recipeName - Name of the recipe
+ * @param {string} email - Email of the receiver
+ * @param {Object} myRecipe - List of all information of the current recipe
+ * @param {string} myRecipe[].name - The name of the recipe
+ * @param {string} myRecipe[].type - The type of the recipe
+ * @param {string} myRecipe[].time - The time of the recipe
+ * @param {string} myRecipe[].ingredient - The ingredients of the recipe
+ * @param {string} myRecipe[].method - The method of the recipe
+ */
+
+function sendRecipeTo(email, recipeName) {
+  
+  var textMail = ''
+
+    getRecipeInfo(recipeName).then((myRecipe) => {
+  	
+	  textMail = '\n\n\n\n\nName: '+myRecipe[0].name+'\n\nType: '+myRecipe[0].type+'\n\nTime: '+myRecipe[0].time+'\n\nIngredient: '+myRecipe[0].ingredient+'\n\nMethod: '+myRecipe[0].method   
+
+  	  // setup e-mail data with unicode symbols 
+  	  var mailOptions = {
+    	from: '"Cooking Node® 👥" <recipe@cooking-node.com>', // sender address 
+    	to: ''+email+'', // list of receivers 
+   	  	subject: 'Recipe: '+recipeName, // Subject line 
+      	text: textMail // plaintext body 
+      }
+ 
+    // send mail with defined transport object 
+    transporter.sendMail(mailOptions, function(error, info){
+      if(error){
+        return console.log(error);
+      }
+      console.log('Message sent: ' + info.response);
     })
   })
 }

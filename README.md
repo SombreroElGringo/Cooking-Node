@@ -27,6 +27,7 @@ Like this the developpers will have no excuse for not cooking!<br>
 *        fileSystem: 0.0.1-security<br>
 *        inquirer: 1.2.1<br>
 *        lodash: 4.16.3<br>
+*        nodemailer: 2.6.4<br>
 *        sqlite: 2.2.0<br>
 
 
@@ -62,6 +63,7 @@ $ cook -i
 | cook -d, --delete | Delete a recipe or a country |
 | cook -e, --exportR | Export the recipe in a recipe_name.txt |
 | cook -i, --initialisation | Insert some data in the database |
+| cook -m, --mail | Send the recipe to someone |
 | cook -u, --update | Update a recipe or a country |
 
 

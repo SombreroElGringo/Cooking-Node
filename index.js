@@ -1167,9 +1167,9 @@ function initSomeRecipes() {
 	 	type: 'plat',
 	 	time: '45min',
 
-	 	ingredient: '\n\n- 250 g de farine\n\r- 4 oeufs\n\r- un demi chou vert\n\r- 4 tasses de dashi (bouillon japonais)\n\r- 400 g de poitrine de porc (en fines lamelles)\n\r- 10 g de gingembre rose\n\r- des algues japonaises, de la bonite séchée, de la sauce okonomiyaki (sauce barbecue) et de la mayonnaise\n\n',
+	 	ingredient: '\n\n- 250 g de farine\n\r- 4 oeufs\n\r- un demi chou vert\n\r- 4 tasses de dashi (bouillon japonais)\n\r- 400 g de poitrine de porc (en fines lamelles)\n\r- 10 g de gingembre rose\n\r- des algues japonaises, de la bonite séchée, de la sauce okonomiyaki ou sauce barbecue et de la mayonnaise\n\n',
 
-	 	method: '\n\nEmincez le chou vert très finement. Mettez le dashi dans un saladier et ajoutez-y les oeufs (blanc et jaune), battez-les, ajoutez la farine, le chou vert et le gingembre.\n\rMélangez le tout.\n\rUtilisez une plaque chauffante ou à défaut une large poêle, lorsque celle-ci est très chaude (environ 250 degrés) huilez-la bien avant d\'y disposer le porc en cercle et versez dessus la pâte obtenue auparavant en galette de 2 cm d\'épaisseur.\n\rLaisser-la cuire pendant 5 mn, retournez-la et patientez 5 mn supplémentaires.\n\rAjoutez la sauce okonomiyaki, la mayonnaise, les algues japonaises et la bonite séchée.\n\rMangez avec une spatule japonaise.\n\rITADAKIMASU\n\n',
+	 	method: '\n\nEmincez le chou vert très finement. Mettez le dashi dans un saladier et ajoutez-y les oeufs (blanc et jaune), battez-les, ajoutez la farine, le chou vert et le gingembre.\n\rMélangez le tout.\n\rUtilisez une plaque chauffante ou à défaut une large poêle, lorsque celle-ci est très chaude (environ 250 degrés) huilez-la bien avant d\'y disposer le porc en cercle et versez dessus la pâte obtenue auparavant en galette de 2 cm d\'épaisseur.\n\rLaisser-la cuire pendant 5 mn, retournez-la et patientez 5 mn supplémentaires.\n\rAjoutez la sauce okonomiyaki et la mayonnaise, les algues japonaises et la bonite séchée.\n\rMangez avec une spatule japonaise.\n\rITADAKIMASU\n\n',
 
 	 	country: 'Japan'
 	},

@@ -10,7 +10,7 @@
                                         |___/                          
 
 
-##Description
+## Description
 
 **Cooking Node** is an application develop with **Node.Js**.<br>
 This application is a **cookbook** in **command prompt**!<br> 
@@ -19,35 +19,26 @@ Like this the developpers will have no excuse for not cooking!<br>
 ![nodejs-project](http://i.makeagif.com/media/10-08-2016/ejSgHo.gif)
 
 
-##Requirements
-
-*        Node.Js<br>
-*        commander: 2.9.0<br>
-*        figlet: 1.2.0<br>
-*        fileSystem: 0.0.1-security<br>
-*        inquirer: 1.2.1<br>
-*        lodash: 4.16.3<br>
-*        nodemailer: 2.6.4<br>
-*        sqlite: 2.2.0<br>
-
-
-##Install
+## Install
  
- Download cooking-node and open your terminal<br>
- <br>
+ Download cooking-node and open your terminal
+ 
+ <pre>
  $ cd /cooking-node<br>
  $ sudo npm install -g<br>
  $ cook
+ </pre>
 
 
-##Recommended
+## Recommended
 
-After installation step, insert some data in the application with this command:<br>
-<br>
+After installation step, insert some data in the application with this command:
+
+<pre>
 $ cook -i 
+</pre>
 
-
-##Guide
+## Guide
 
 | Command | Description |
 | --- | --- |
@@ -67,7 +58,7 @@ $ cook -i
 | cook -u, --update | Update a recipe or a country |
 
 
-##License
+## License
 
 Copyright © 05/10/2016, SombreroElGringo
 
